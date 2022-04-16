@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %} project1{% endblock title %}
+{% block body %}
+<style>
+    .circle {
+        
+        /* Green */
+        width: 100px;
+        padding:50px 0x;
+        line-height: 6;
+        margin: 60px auto;
+        background-color: #140a13;
+        color: rgb(247, 242, 246);
+    
+        text-align: center;
+        /* text-decoration: none;
+        display: inline-block;
+        font-size: 16px; */
+        
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    .circle :hover{
+        background: salmon;
+
+    }
+</style>
+<hr style="height:4px;border-width:2px;color:gray;background-color:gray">
+<h1 class="text-center"><em>This is my project1 page</em></h1>
+<hr style="height:4px;width:100%;text-align:left;margin-left:0">
+<form class="text-center"  method="post" action="/project1" enctype="multipart/form-data"> 
+    {% csrf_token %}
+    <label for="name" class="form-label">ENTER YOUR NAME</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    <label for="image" class="form-label">ENTER THE IMAGE</label>
+    <input type="file" class="form-control" id="image" name="image" placeholder="Enter your image">
+ <button class="circle" type="submit">SUBMIT</button>
+
+</form>
+<!-- <img src="/static/car0.jpg" alt=""> -->
+<a href="/output">otuput</a>
+<!-- {{text}} -->
+{% endblock body %}
+

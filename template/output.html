@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block title %} output{% endblock title %}
+{% block body %}
+
+  
+  <style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+   .move{
+      text-align: center;
+      width: 250px;
+      height: 50px;
+      background-color: red;
+      position: relative;
+      animation-name: example;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-delay: s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes example {
+      0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+      }
+
+      50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+      }
+
+      75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+      }
+
+      100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+      }
+    }
+  </style>
+  <img src="media/media/3.PNG" alt="" width="300" height="300" class="center">
+  <div class="move">
+    <h2> {{text}}</h2>
+  </div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

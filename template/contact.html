@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}CONTACT{% endblock title %}
+{% block body %}
+<div class="container-fluid my-4">
+    <img src="/static/1.jpg" class="d-block w-100" alt="...">
+</div>
+<div class="container mb-3 py-4">
+   <form method="post" action="/contact" enctype="multipart/form-data"> 
+   {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">NAME</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">EMAIL ADDRESS</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">PHONE NUMBER</label>
+        <input type="phone" class="form-control" id="phone"name="phone" placeholder="Enter your number">
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label">ENTER YOUR QUERRY</label>
+        <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+
+    </div>
+    <button class= "btn btn-primary" type="submit">SUBMIT</button>
+</div>
+</form>
+
+{% endblock body %}

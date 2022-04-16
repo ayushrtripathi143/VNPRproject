@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% block title %} project1{% endblock title %}
+{% block body %}
+<style>
+    .intro{
+        background-image: url("/static/download.jpg");       
+        
+        color:white;
+}
+ .text-center{
+     text-align: center;
+     color:white;
+     background-color: black;
+     height: 60px;
+     width: 1000px;
+     margin-left: 100px;
+ }
+    .form{
+        align-items: center;
+    }
+.output{  text-align: center;
+    background-color: #1a0303; /* Green */
+    height: 70px;
+    width: fit-content;
+
+  color: white;
+  padding: 20px;
+  display: inline-block;
+  /* font-size: 25px; */
+  margin: 4px 600px;
+  cursor: pointer; 
+  border-radius: 50%; 
+  
+}
+</style>
+
+
+
+
+<div class="container my-4"><div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/1_dslRXGbz_pTq7J9mDV6aJA.png" class="d-block w-100" alt="..." height="450px" width="500px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/opencv_anpr_header.png" class="d-block w-100" alt="..." height="450px" width="500px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/static/car0.jpg" class="d-block w-100" alt="..." height="450px" width="500px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+  </div>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+<hr style="height:4px;border-width:2px;color:gray;background-color:gray">
+<h1 class="text-center"><em>AUTOMATIC NUMBER PLATE DETECTION</em></h1>
+<div class="intro">
+    <table>
+    <tr><th><h1><em>Introduction</em></h1></th><th><p>  Follow three simple steps shown below</p></th></tr>
+   <tr><td><p>Vehicle Number Plate Recognition system is utilized at numerous spots like Petrol Pumps, <br>
+        Shopping Malls, Airports, parkways, toll corners, Hotels, Hospitals, Parking parcels, <br>
+        Defense and Military checkpoints, and so forth. The idea behind this the camera of this <br>
+        system framework catches an image of the vehicle tag and afterward, the image is prepared <br>
+        through multiple numbers of algorithms to give an alphanumeric transformation of the image <br>
+        into a text format. There are tons of ways approaches to construct this framework however <br>
+        here we are going to utilize python to code and machine learning to prepare the model.</p>
+</td>
+<td>
+<div class="todo">
+    
+    <ul>
+        <li>
+            Enter a vehicle image with number plate
+        </li>
+        <li>
+            Click on upload file
+        <li>
+            Click on output button
+        </li>
+    </ul> </td></tr>
+</div></table></div>
+<hr style="height:4px;width:100%;text-align:center;margin-left:0">
+    <form  action="upload" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input class="form" type="file" name="image"><br>
+        <input  class="form" type="submit" value="upload File"><br>
+    
+    </form>
+    <!-- <img src="{{pic}}"> -->
+    <br>
+   <div class="output"><a href="/output">output</a>
+   
+   
+   
+   
+   
+   
+   
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   </div> 
+{% endblock body %}
